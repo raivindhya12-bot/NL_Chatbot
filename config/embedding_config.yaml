@@ -1,0 +1,11 @@
+model_name: "sentence-transformers/all-MiniLM-L6-v2"
+batch_size: 32
+device: "cpu"  # Change to "cuda" if GPU available
+
+vector_db:
+  type: "chromadb"
+  persist_directory: "./data/embeddings/chroma_db"
+  collection_name: "nextleap_content"
+
+processing:
+  show_progress: true

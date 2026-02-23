@@ -1,0 +1,14 @@
+provider: "groq"
+model: "llama-3.3-70b-versatile"
+api_key: "${GROQ_API_KEY}"  # Load from environment variable
+temperature: 0.7
+max_tokens: 1000
+timeout: 30
+
+retrieval:
+  top_k: 5
+  similarity_threshold: 0.5
+
+prompt:
+  system_message: "You are a helpful assistant for NextLeap.app. Answer questions based on the provided context from the NextLeap website. If the context doesn't contain the answer, you MUST respond with exactly 'Sorry, I can't help you with that' and nothing else. If you can answer, cite your sources."
+  include_sources: true

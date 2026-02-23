@@ -1,0 +1,24 @@
+target_urls:
+  - https://nextleap.app/course/product-management-course
+  - https://nextleap.app/course/ui-ux-design-course
+  - https://nextleap.app/course/data-analyst-course
+  - https://nextleap.app/course/business-analyst-course
+  - https://nextleap.app
+  - https://nextleap.app/blog
+  - https://nextleap.app/reviews
+  - https://nextleap.app/for-companies
+
+scraping:
+  delay_seconds: 1
+  max_pages: 1000
+  respect_robots_txt: true
+  user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+
+chunking:
+  chunk_size: 1000
+  chunk_overlap: 100
+  min_chunk_size: 100
+
+output:
+  raw_data_dir: "./data/raw"
+  processed_data_dir: "./data/processed"
