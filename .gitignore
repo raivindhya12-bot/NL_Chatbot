@@ -9,13 +9,11 @@ env/
 ENV/
 .venv
 
-# Data
+# Data (Ignore raw, allow processed and embeddings for cloud deployment)
 data/raw/
-data/processed/
-data/embeddings/
-*.csv
-*.json
-*.parquet
+!data/processed/
+!data/embeddings/
+!*.json
 
 # Environment
 .env
